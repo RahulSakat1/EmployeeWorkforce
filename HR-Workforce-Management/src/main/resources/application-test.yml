@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:hrtest;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+security:
+  jwt:
+    secret: VGhpc0lzQURldmVsb3BtZW50T25seVNlY3JldEtleUZvckpXVFRva2VuczEyMzQ1Njc4OTA=
+    expiration-ms: 3600000

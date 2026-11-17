@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: hr-workforce-postgres
+    environment:
+      POSTGRES_DB: hr_workforce
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - hr_postgres_data:/var/lib/postgresql/data
+volumes:
+  hr_postgres_data:
